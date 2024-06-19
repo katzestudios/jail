@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Jail Time</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            background-color: transparent;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+        }
+        #jailTime {
+            font-size: 24px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+    <div id="jailTime" style="display:none;">Gefängniszeit: 0 Minuten</div>
+
+    <script>
+        window.addEventListener('message', function(event) {
+            var data = event.data;
+            if (data.type === 'updateJailTime') {
+                if (data.jailTime > 0) {
+                    document.getElementById('jailTime').innerText = 'Gefängniszeit: ' + data.jailTime + ' Minuten';
+                    document.getElementById('jailTime').style.display = 'block';
+                } else {
+                    document.getElementById('jailTime').style.display = 'none';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
