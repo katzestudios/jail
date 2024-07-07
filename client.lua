@@ -28,12 +28,25 @@ lib.registerContext({
         title = 'Spieler Freilassen',
         description = 'Spieler aus der U-Haft Entlassen',
         icon = 'home',
-        event = 'SOON',
+        event = 'katze:releaseplayer',
         arrow = true, 
-        disabled = true
+        disabled = false
       }
     }
 })
+
+RegisterNetEvent('katze:releaseplayer')
+AddEventHandler('katze:releaseplayer', function()
+
+  local closestPlayer, closestPlayerDistance = ESX.Game.GetClosestPlayer()
+  local player = ESX.PlayerData.identifier
+  local playername = ESX.PlayerData.name
+  local person = GetPlayerServerId(closestPlayer)
+
+  TriggerEvent('katze:startautorelease', person)
+  TriggerServerEvent('katze:miscelanous', person)
+
+end)
 
 
 --[[ SOON
