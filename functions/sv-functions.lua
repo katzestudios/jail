@@ -129,6 +129,21 @@ AddEventHandler('katze:cleardatabaseafterjail', function(playerId)
 
 end)
 
+-- A Little Extra Function
+
+RegisterNetEvent('katze:miscelanous')
+AddEventHandler('katze:miscelanous', function(playerId)
+
+    local xPlayer = ESX.GetPlayerFromId(playerId)
+    local identifier = xPlayer.getIdentifier()
+
+    MySQL.Async.execute('UPDATE users SET jailtime = @jailtime WHERE identifier = @identifier', {
+        ['@jailtime'] = '0',
+        ['@identifier'] = identifier
+    })
+
+end)
+
 ------------------------------------------------------
 -- DISCORD LOGS // CLIENT + SERVER LOGS TO WEBHOOK
 ------------------------------------------------------
