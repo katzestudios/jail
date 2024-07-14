@@ -1,6 +1,6 @@
 Config = {}
 
-Config.webhook = "https://discord.com/api/webhooks/1252702711837622333/q4QtNqLbaF1nW7Hd4-hTbggBEZtfWUMQYJE3XKuDFRWKMzZe25gCd781vHvAknu1ZLfR" -- The Webhook for Discord-Logs // Of Course :)
+Config.webhook = "" -- The Webhook for Discord-Logs // Of Course :)
 Config.Debug = true -- ATTENTION // Only enable this if no Players are on your Server. Much Things are gonna get Printed which are not for everyone (Like the Webhook :D)
 
 
