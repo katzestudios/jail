@@ -22,7 +22,7 @@ client_scripts {
 shared_scripts {
     '@ox_lib/init.lua',
     '@ox_target',
-    'config.lua',
+    'Config.lua',
     '@es_extended/imports.lua'
 }
 
