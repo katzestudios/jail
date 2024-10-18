@@ -9,6 +9,7 @@ server_scripts {
     '@mysql-async/lib/MySQL.lua',
     'functions/sv-functions.lua',
     'server.lua',
+    'config_s.lua',
     'ui/ui-sv.lua'
 }
 
@@ -21,7 +22,7 @@ client_scripts {
 shared_scripts {
     '@ox_lib/init.lua',
     '@ox_target',
-    'Config.lua',
+    'config.lua',
     '@es_extended/imports.lua'
 }
 
