@@ -1,11 +1,9 @@
 Config = {}
 
-Config.webhook = "" -- The Webhook for Discord-Logs // Of Course :)
 Config.Debug = true -- ATTENTION // Only enable this if no Players are on your Server. Much Things are gonna get Printed which are not for everyone (Like the Webhook :D)
 
 
 -- CELLS // Configurate your Jail Cells
-
 Config.Cells = {
 
     cell1 = {x = -585.9249, y = -615.6224, z = 31.4987, heading = 178.0000},

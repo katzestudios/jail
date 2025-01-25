@@ -9,6 +9,7 @@ server_scripts {
     '@mysql-async/lib/MySQL.lua',
     'functions/sv-functions.lua',
     'server.lua',
+    'config_s.lua',
     'ui/ui-sv.lua'
 }
 

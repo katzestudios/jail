@@ -1,0 +1,1 @@
+Config.webhook = "" -- The Webhook for Discord-Logs // Of Course :)
